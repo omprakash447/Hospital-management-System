@@ -82,7 +82,7 @@ const time = setInterval(function() {
     body.style.display = "none";
     icon.style.display = "block";
 
-}, 3000);
+}, 100);
 
 
 
@@ -163,3 +163,21 @@ cross.addEventListener('click', function() {
 // }
 
 // animation();
+
+
+
+
+// prescription
+let prescription = document.getElementById("prescription");
+let body2 = document.getElementsByClassName("body2");
+let bd2 = document.getElementById("bd2");
+let click = document.getElementById("click");
+
+
+bd2.style.opacity = "0.5";
+
+click.addEventListener("click", () => {
+    bd2.style.opacity = "1"
+    click.style.display = "none";
+    prescription.style.display = "none";
+})

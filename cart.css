@@ -84,7 +84,6 @@ nav {
     left: 90%;
     transform: translate(-50%, -50%);
     display: none;
-    /* position: fixed; */
 }
 
 
@@ -98,7 +97,6 @@ nav {
         width: 100%;
         position: fixed;
         background-color: #f5f5f5;
-        /* overflow: hidden; */
         padding: 10px;
         height: 10%;
     }
@@ -116,7 +114,6 @@ nav {
     }
     .tab-cross {
         top: 5%;
-        /* left: -10%; */
     }
 }
 
@@ -162,56 +159,6 @@ nav {
 }
 
 
-/* animation */
-
-.body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #282c34;
-    color: white;
-    font-family: Arial, sans-serif;
-    /* display: none; */
-}
-
-.loader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 80px;
-    height: 40px;
-}
-
-.dot {
-    width: 16px;
-    height: 16px;
-    background-color: rgb(216, 96, 53);
-    border-radius: 50%;
-    animation: bounce 1.5s infinite ease-in-out;
-}
-
-.dot:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.dot:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-@keyframes bounce {
-    0%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-}
-
-
 /* productpage */
 
 .productspage {
@@ -244,7 +191,6 @@ nav {
     width: 100%;
     background-color: white;
     display: flex;
-    /* flex-direction: row; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -403,7 +349,6 @@ nav {
     width: 100%;
     background-color: white;
     display: flex;
-    /* flex-direction: row; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -490,7 +435,6 @@ nav {
     transform: translate(-50%, -50%);
     position: fixed;
     cursor: pointer;
-    /* display: none; */
 }
 
 .cart:hover {
@@ -527,7 +471,6 @@ nav {
     padding: 20px;
     overflow: scroll;
     display: none;
-    /* margin-top: 150px; */
 }
 
 .cartpage::-webkit-scrollbar {
@@ -536,9 +479,10 @@ nav {
 
 .totalprice {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #222;
 }
 
 .cartpage li {
@@ -571,7 +515,7 @@ nav {
         margin: 5px;
     }
     .totalprice {
-        top: 20%;
+        top: 5%;
     }
 }
 
@@ -671,7 +615,7 @@ nav {
     .footer {
         padding: 10px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         align-items: center;
         padding: 50px;

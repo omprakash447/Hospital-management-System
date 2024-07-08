@@ -697,7 +697,7 @@ nav {
     .footer {
         padding: 10px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         align-items: center;
         padding: 50px;
@@ -814,4 +814,50 @@ nav {
     justify-content: center;
     align-items: center;
     display: none;
+}
+
+
+/* prescription */
+
+.prescription p {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.prescription {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    /* display: none; */
+    position: fixed;
+}
+
+.prescription button {
+    height: 30px;
+    width: 80px;
+    background-color: rgb(225, 119, 81);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.chaka {
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    transform: translate(-505, -50%);
+    cursor: pointer;
+}
+
+.chaka i {
+    font-size: 30px;
 }

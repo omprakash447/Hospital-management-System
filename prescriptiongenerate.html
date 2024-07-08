@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescriptiion Generate</title>
+</head>
+<style>
+    /* styles.css */
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    form div {
+        margin-bottom: 10px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #218838;
+    }
+    
+    .info {
+        font-family: sans-serif;
+    }
+    
+    .dr {
+        height: 70vh;
+        width: 100%;
+        background-color: aliceblue;
+    }
+    
+    .resume-output {
+        /* margin-left: 30px; */
+        /* margin-top: 20px; */
+        padding: 50px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        height: 100%;
+        width: 100%;
+        line-height: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        position: fixed;
+    }
+    
+    #print {
+        height: 30px;
+        width: 100px;
+        background-color: #218838;
+        color: white;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .about {
+        height: 30%;
+        width: 100vw;
+        background-color: white;
+        padding: 20px;
+    }
+    
+    .dr {
+        height: 50%;
+        width: 100vw;
+        background-color: aliceblue;
+        padding: 20px;
+    }
+    
+    .main {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    @media screen and (max-width:1000) {
+        .about {
+            height: 50%;
+            width: 100%;
+        }
+        .dr {
+            height: 50%;
+            width: 100%;
+        }
+        .main {
+            flex-wrap: wrap;
+        }
+    }
+    
+    .home {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    
+    #home {
+        height: 30px;
+        width: 100px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 style="color: orange;">Prescription Generate</h1>
+        <form id="resume-form">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="name">Parent's Name :</label>
+                <input type="text" id="mname" name="name" required>
+            </div>
+            <div>
+                <label for="email">Age :</label>
+                <input type="number" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div>
+                <!-- <label for="summary">Dissease :</label>
+                <textarea id="disseas" name="summary" required></textarea>
+            </div>
+            <div>
+                <label for="experience">How you fell :</label>
+                <textarea id="experience" name="experience" required></textarea>
+            </div>
+            <div>
+                <label for="education">From when u got affected :</label>
+                <textarea id="affected" name="education" required></textarea>
+            </div> -->
+                <button type="submit" id="x">Generate Prescriptiion</button>
+        </form>
+        <div class="home">
+            <button id="home"><a href="index.html" style="color:white; text-decoration: none;" >Go back</a></button>
+        </div>
+        <div id="resume-output" class="resume-output"></div>
+        </div>
+</body>
+<script>
+    document.getElementById('resume-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const mname = document.getElementById("mname").value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+
+        const resumeOutput = document.getElementById('resume-output');
+        resumeOutput.innerHTML = `
+        <h1 style="color:orange">SUM HOSPITAL | SOA</h1>
+        <hr>
+        <div class="main">
+        <div class="about">
+        <p><strong style="color:orange">Ptient's Name : </strong>${name}</h2>
+            <hr>
+        <p><strong style="color:orange">Parent's Name : </strong>${mname}</h2>
+            <hr>
+        <p><strong style="color:orange">Age :</strong> ${email}</p>
+        <hr>
+        <p><strong style="color:orange">Phone:</strong> ${phone}</p>
+        <p><strong style="color:orange">Address:</strong> ${address}</p>
+        </div>
+        <div class='dr'>
+        <h1>Doctor's Consoles...</h1>
+        </div>
+        </div>
+        <button id="print">Print</button>
+    `;
+
+
+        resumeOutput.style.display = "block";
+
+        const print = document.getElementById("print");
+        print.addEventListener("click", function() {
+            window.print();
+        })
+    });
+</script>
+
+
+</html>
