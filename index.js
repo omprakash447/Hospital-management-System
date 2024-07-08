@@ -82,7 +82,7 @@ const time = setInterval(function() {
     body.style.display = "none";
     icon.style.display = "block";
 
-}, 100);
+}, 4000);
 
 
 
